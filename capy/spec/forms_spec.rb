@@ -10,6 +10,7 @@ describe 'Forms' do
 
         expect(find('#flash').visible?).to be true
         expect(find('#flash')).to have_content 'Olá, Tony Stark. Você acessou a área logada!'
+        puts find('#flash').text
     end
 
     it 'senha incorreta', :temp do
@@ -20,7 +21,9 @@ describe 'Forms' do
 
         click_button 'Login'
 
+        expect(find('#flash').visible?).to be true
         expect(find('#flash')).to have_content 'Senha é invalida!'
+        puts find('#flash').text
     end
 
     it 'usuário não cadastrado' do
@@ -31,7 +34,10 @@ describe 'Forms' do
 
         click_button 'Login'
 
-        expect(find('#flash')).to have_content 'Senha é invalida!'
+        expect(find('#flash').visible?).to be true
+        expect(find('#flash')).to have_content 'O usuário informado não está cadastrado!'
+        puts find('#flash').text
+    end    
     
 end    
 
