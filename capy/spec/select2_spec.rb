@@ -23,7 +23,7 @@ describe 'Select2', :select2 do
   
     describe('multiple', :mult) do
       before(:each) do
-        visit '/apps/select2/multi.html'
+        visit 'https://training-wheels-protocol.herokuapp.com/apps/select2/multi.html'
       end
   
       def selecione(ator)
