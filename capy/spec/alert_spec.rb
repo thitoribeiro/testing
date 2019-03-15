@@ -5,7 +5,7 @@ describe 'Alertas de JS', :alerts do
   
     it 'alerta' do
       click_button 'Alerta'
-  
+        sleep 3
       msg = page.driver.browser.switch_to.alert.text
       expect(msg).to eql 'Isto é uma mensagem de alerta'
   
@@ -14,7 +14,7 @@ describe 'Alertas de JS', :alerts do
   
     it 'sim confirma' do
       click_button 'Confirma'
-  
+        sleep 3
       msg = page.driver.browser.switch_to.alert.text
       expect(msg).to eql 'E ai confirma?'
   
@@ -24,7 +24,7 @@ describe 'Alertas de JS', :alerts do
   
     it 'não confirma' do
       click_button 'Confirma'
-  
+        sleep 3
       msg = page.driver.browser.switch_to.alert.text
       expect(msg).to eql 'E ai confirma?'
   
@@ -35,6 +35,7 @@ describe 'Alertas de JS', :alerts do
     it 'accept prompt', :accept_prompt do
       accept_prompt(with: 'Fernando') do
         click_button 'Prompt'
+        sleep 3
       end
   
       expect(page).to have_content 'Olá, Fernando'
