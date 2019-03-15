@@ -33,7 +33,7 @@ describe 'Alertas de JS', :alerts do
     end
   
     it 'accept prompt', :accept_prompt do
-      accept_prompt(with: 'Fernando') do
+      accept_prompt(with: 'Thito') do
         click_button 'Prompt'
         sleep 3
       end
@@ -42,6 +42,12 @@ describe 'Alertas de JS', :alerts do
     end
   
       it 'dismiss prompt', :dismiss_prompt do
-   
+        dismiss_prompt(with: 'Thito') do
+          click_button 'Prompt'
+          sleep 3   
+        end
+
+        expect(page).to have_content 'Olá, null'
+        sleep 3
     end
   end
