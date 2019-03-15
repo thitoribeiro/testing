@@ -13,7 +13,7 @@ describe 'Teclado', :key do
     end
   
     it 'enviando letras' do
-      letras = %w[a s d f g h j k l] # datilografica hahahahah
+      letras = %w[a s d f g h j k l]
   
       letras.each do |l|
         find('#campo-id').send_keys l
