@@ -17,7 +17,7 @@ describe 'Login 2', :login2 do
       when /Ano/
         find('#year').set '1970'
       end
-  
+      sleep 5
       click_button 'Login'
       expect(find('#flash')).to have_content 'Olá, Tony Stark. Você acessou a área logada!'
     end
