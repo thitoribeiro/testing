@@ -1,4 +1,6 @@
 require "selenium-webdriver"
+require "rspec"
+require "chromedriver-helper"
 
 driver = Selenium::WebDriver.for :firefox
 driver.navigate.to "http://192.168.3.136:8205/SasTesteProjeto"
