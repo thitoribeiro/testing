@@ -21,14 +21,14 @@ describe 'Login' do
   
     end
 
-    #it 'succeeded' do
-      #@driver.get 'http://192.168.3.136:8205/SasTesteProjeto'
-      #@driver.fid_element(id: 'Usuario').send_keys('thito.adm')
-      #@driver.fid_element(id: 'Senha').send_keys('#Thito123')
-      #@driver.find_element(id: 'entrar').click
-      #@driver.find_element(class: 'welcome').eql to 'Bem vindo,'
+    it 'succeeded' do
+      @driver.get 'http://192.168.3.136:8205/SasTesteProjeto'
+      @driver.fid_element(id: 'Usuario').send_keys('thito.adm')
+      @driver.fid_element(id: 'Senha').send_keys('#Thito123')
+      @driver.find_element(id: 'entrar').click
+      @driver.find_element(class: 'welcome').eql to 'Bem vindo,'
 
-    #end
+    end
 
 end
 
