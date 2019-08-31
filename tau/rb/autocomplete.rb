@@ -10,8 +10,8 @@ autocomplete.send_keys('Rua Maracy, 2-80, Vila Maracy, Bauru, São Paulo, Brasil
 driver.manage.timeouts.implicit_wait = 5
 
 # explicit
-wait = selenium::webdriver::wait.new(timeout: 5)
-wait.until { driver.find_element(class: 'pac-item').displayed? }
+#wait = selenium::webdriver::wait.new(timeout: 5)
+#wait.until { driver.find_element(class: 'pac-item').displayed? }
 
 autocomplete_result = driver.find_element(class: 'pac-item')
 autocomplete_result.click
