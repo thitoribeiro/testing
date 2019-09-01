@@ -1,6 +1,6 @@
 require "selenium-webdriver"
 require "rspec"
-require "chromedriver-helper"
+require "webdrivers"
 
 $first_name = 'John'
 $last_name = 'Doe'
