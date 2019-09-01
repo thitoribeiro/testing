@@ -1,6 +1,7 @@
 require "selenium-webdriver"
 require "rspec"
 require "webdrivers"
+#require "geckodriver-helper"
 
 $first_name = 'John'
 $last_name = 'Doe'

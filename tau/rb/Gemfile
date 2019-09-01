@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem 'geckodriver-helper'
 gem 'webdrivers'
 gem 'selenium-webdriver'
 gem 'rspec'
