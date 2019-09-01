@@ -3,6 +3,7 @@ require "rspec"
 require "webdrivers"
 #require "geckodriver-helper"
 
+
 $first_name = 'John'
 $last_name = 'Doe'
 $job_title = 'QA'
@@ -30,7 +31,7 @@ end
 
 describe "automating a form" do
   it "submits a form" do
-    driver = Selenium::WebDriver.for :firefox
+    driver = Selenium::WebDriver.for :chrome
     driver.navigate.to "https://formy-project.herokuapp.com/form"
     submit_form(driver)
     actual_banner_text = get_banner_text(driver)
