@@ -65,6 +65,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  bundler
   capybara
   launchy
   rspec
