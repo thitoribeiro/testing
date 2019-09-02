@@ -13,6 +13,7 @@ class LoginPage
     end
 
     def Acessar
-        find('#acessar') 
+        find('#acessar').click 
+    end
 end
 
