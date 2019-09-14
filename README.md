@@ -1,2 +1,2 @@
 # plusqa
-Software Test Automation Studies
+Software Test Automation
