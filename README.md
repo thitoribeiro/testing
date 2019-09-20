@@ -1,2 +1,2 @@
-# plusqa
-Software Test Automation
+# testing
+Studying and developing tests
