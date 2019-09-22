@@ -1,0 +1,24 @@
+*Configurar docker images
+sudo docker network create --driver bridge matrix
+sudo docker run --name pgdb1 --network=matrix -e "POSTGRES_PASSWORD=qaninja" -p 5432:5432 -v var/lib/postgresql/data -d postgres
+sudo docker run --name pgadmin1 --network=matrix -e "PGADMIN_DEFAULT_EMAIL=thito.ribeiro@hotmail.com" -e "PGADMIN_DEFAULT_PASSWORD=qaninja" -p 15432:80 -d dpage/pgadmin4
+sudo docker run --name nflix1-api-movies --network=matrix -e "DATABASE=pgdb1" -p 3002:3002 -d papitoio/nflix-api-movies
+sudo docker run --name nflix1-api-users --network=matrix -e "DATABASE=pgdb1" -p 3001:3001 -d papitoio/nflix-api-users
+sudo docker run --name nflix1-web --network=matrix -e "VUE_APP_API=http://localhost:3000" -p 8080:8080 -d papitoio/nflix-web
+
+*Verificar docker images
+sudo docker ps
+sudo docker ps -a
+
+*Startar docker images
+sudo docker start pgdb1
+sudo docker start pgadmin1
+
+*Acessar o DB no browser
+http://localhost:15432
+
+*Acessar a API no browser
+http://localhost:3001/apidoc/
+
+*Acessar a aplicação no browser
+http://localhost:3000
