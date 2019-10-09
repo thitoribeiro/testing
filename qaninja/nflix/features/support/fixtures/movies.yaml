@@ -1,0 +1,24 @@
+ultimato:
+  title: "Vingadore Ultimato"
+  status: "Disponível"
+  year: 2019
+  release_date: "24/04/2019"
+  cast: ["Robert Downey Jr", "Chris Evans", "Mark Ruffalo", "Chris Hemsworth", "Scarlett Johansson"]
+  overview: "Após Thanos eliminar metade das criaturas vivas, os Vingadores precisam lidar com a dor da perda de amigos e seus entes queridos."
+  cover: "ultimato.jpg"
+spider:
+  title: "Homem Aranha Longe de Casa"
+  status: "Pré-venda"
+  year: 2019
+  release_date: "04/07/2019"
+  cast: ["Tom Holland", "Samuel L. Jackson", "Marisa Tomei"]
+  overview: "Peter Parker está em uma viagem pela Europa e é convocado por Nick Fury para uma missão."
+  cover: "spider.jpg"
+jocker:
+  title: "Coringa"
+  status: "Em breve"
+  year: 2019
+  release_date: "20/08/2019"
+  cast: ["Joaquim Phoenix"]
+  overview: "Arthur Fleck trabalha como palhaço para uma agência de talentos e, toda semana, precisa comparecer a uma agente social, devido aos seus conhecidos problemas mentais."
+  cover: "coring2.jpg"
