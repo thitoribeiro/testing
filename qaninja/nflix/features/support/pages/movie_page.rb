@@ -22,6 +22,6 @@ class MoviePage
     end
 
     find('textarea[name=overview]').set movie["overview"]
-
+    find()
 end
 end
