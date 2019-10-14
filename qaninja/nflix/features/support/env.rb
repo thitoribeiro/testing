@@ -1,5 +1,6 @@
 require "capybara"
 require "capybara/cucumber"
+require "os"
 require "selenium-webdriver"
 
 require_relative "helpers"
