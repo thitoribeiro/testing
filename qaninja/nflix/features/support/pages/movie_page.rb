@@ -6,8 +6,8 @@ class MoviePage
     end
 
     def upload(file)
-      cover_file = File.join(Dir.pwd, "features/support/fixtures/cover/" + movie["cover"])
-      cover_file = cover_file.tr("/", "\\") if OS.windows?
+      cover_file = File.join(Dir.pwd, "features/support/fixtures/cover/" + file)
+      #cover_file = cover_file.tr("/", "\\") if OS.windows?
 
       Capybara.ignore_hidden_elements = false
       attach_file('upcover', cover_file)
@@ -19,10 +19,10 @@ class MoviePage
       movie['cast'].each do |a|
       actor.set a
       actor.send_keys :tab
-
     end
+  end
 
-    def create(movie)
+  def create(movie)
       find('input[name=title]').set movie["title"]  
 
       # Combobox - customizado com li's
@@ -37,6 +37,8 @@ class MoviePage
       find('textarea[name=overview]').set movie["overview"]
 
       upload(movie["cover"])
+      
+      find("#create-movie").click
 
     end
   end
