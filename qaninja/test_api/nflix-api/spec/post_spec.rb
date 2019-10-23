@@ -1,8 +1,8 @@
 
 describe "post" do
-    context "quando cadastro um novo usuário" do
+    context "when new user" do
         before do
-            @new_user = { full_name: "Thito Ribeiro", email: "thito.ribeiro@hotmail.com", password: "pwd123"}
+            @new_user = { full_name: '1237', email: "thito.ribeiro@hotmail.com", password: "pwd123"}
             Database.new.delete_user(@new_user[:email])
 
             @result = HTTParty.post(
@@ -13,11 +13,8 @@ describe "post" do
                 },
             )
         end
-
-        it "então deve retornar 200" do
-            puts @result
-            expect(@result.response.code).to eql "200"
-        end
+        
+        it { expect(@result.response.code).to eql "200" }
     end
 end
 
