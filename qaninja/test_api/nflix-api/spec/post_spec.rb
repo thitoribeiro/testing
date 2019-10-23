@@ -1,22 +1,16 @@
-describe "user register" do
+describe "cadastro" do
+    it "novo usuario" do
 
-    it "new user" do
+        Database.new.delete_user("thito.ribeiro@hotmail.com")
+
         result = HTTParty.post(
-        "https://5d9cddc466d00400145ca017.mockapi.io/user", 
-        body: {
-            id: "1",
-            name: "name 1",
-            lastname: "lastname 1",
-            email: "email 1",
-            phone: "phone 1",
-            whatsapp: "whatsapp 1",
-            address: "address 1",
-            city: "city 1",
-            state: "state 1"
-        }.to_json
-    )
+            "http://localhost:3000/user", 
+            body: {full_name: "Thito Ribeiro", email: "thito.ribeiro@hotmail.com", password: "pwd123"}.to_json,
+            headers: {
+                "Content-Type" => "application/json",
+            },
+        )
         puts result
         expect(result.response.code).to eql "200"
-    
     end
 end
