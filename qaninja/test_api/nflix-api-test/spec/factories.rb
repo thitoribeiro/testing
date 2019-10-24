@@ -8,8 +8,14 @@ FactoryBot.define do
     password { "jedi123" }
 
     after(:build) do |user|
-      #puts "apagando o email " + user.email
+      puts "apagando o email " + user.email
       Database.new.delete_user(user.email)
     end
   end
+
+  factory :user_wrong_email, class: UserModel do
+    full_name { "Papito Skywalker" }
+    email { "papito#jedi.com" }
+    password { "jedi123" }
+end
 end
