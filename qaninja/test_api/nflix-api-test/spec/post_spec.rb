@@ -20,9 +20,9 @@ describe "post" do
           "Content-Type" => "application/json",
         },
       )
-      puts @result
     end
     it { expect(@result.response.code).to eql "412"}
+    it { expect(@result.parsed_response["msg"]).to eql "Oops. You entered a wrong email." }
   end
 end
 
