@@ -21,4 +21,12 @@ describe AvengersHeadQuarter do
     expect(hq.list).to eql ['Spiderman']
   end
 
+  it 'deve adicionar uma lista de vingadores' do
+    hq = AvengersHeadQuarter.new
+    hq.put('Thor')
+    hq.put('Hulk')
+    hq.put('Spiderman')
+    expect(hq.list).to include 'Thor'
+  end
+
 end
