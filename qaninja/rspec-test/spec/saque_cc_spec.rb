@@ -1,4 +1,4 @@
-require_relative '../app/bank'
+require_relative '../..app/bank'
 
 describe ContaCorrente do
   describe 'Saque' do
@@ -8,7 +8,7 @@ describe ContaCorrente do
         @cc.saca(200)
       end
       it 'entao atualiza saldo' do
-        expect(@conta.saldo).to eql 800.00
+        expect(@cc.saldo).to eql 800.00
       end
     end
 
