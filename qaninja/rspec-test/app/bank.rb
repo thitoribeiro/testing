@@ -17,7 +17,7 @@ class Conta
 end
 
 class ContaCorrente < Conta
-    def saca(valor, max = 700, taxa = 5.00)
+    def saca(valor, max = 700, taxa = 0.00)
         super
     end
 end

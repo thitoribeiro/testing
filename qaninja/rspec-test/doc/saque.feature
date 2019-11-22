@@ -8,7 +8,7 @@ Funcionalidade: Saque no Caixa Eletrônico
 Cenário: Saque em conta corrente
     Dado que eu tenho R$ 1000.00 em minha conta corrente
     Quando faço um saque de R$ 200.00
-    Então meu saldo final deve ser R$ 795.00
+    Então meu saldo final deve ser R$ 800.00
 
 Cenário: Deu ruim não tenho saldo
     Dado que eu tenho R$ 0.00 em minha conta corrente

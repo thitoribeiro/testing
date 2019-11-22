@@ -10,7 +10,7 @@ describe ContaPoupanca do
                 @cp.saca(200.00)
             end
             it 'entao atualiza saldo' do
-                expect(@cp.saldo).to eql 798.00
+                expect(@cp.saldo).to eql 800.00
             end
         end
 
