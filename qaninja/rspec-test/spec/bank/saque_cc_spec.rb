@@ -1,4 +1,4 @@
-require_relative '../..app/bank'
+require_relative '../../app/bank'
 
 describe ContaCorrente do
   describe 'Saque' do
