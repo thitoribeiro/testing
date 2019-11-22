@@ -42,7 +42,7 @@ describe ContaCorrente do
         @cc.saca(701.00)
       end
       it 'então exibe mensagem' do
-        expect(@cc.mensagem).to eql 'Limite máximo por saque é de R$700'
+        expect(@cc.mensagem).to eql 'Limite máximo por saque é de R$ 700'
       end
       it 'e o saldo permanece' do
         expect(@cc.saldo).to eql 1000.00
