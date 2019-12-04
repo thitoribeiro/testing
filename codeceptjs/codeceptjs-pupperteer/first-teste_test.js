@@ -1,5 +1,5 @@
 
-Feature('First teste');
+Feature('First test');
 
 Scenario('test something', (I) => {
   I.amOnPage('https://github.com');
