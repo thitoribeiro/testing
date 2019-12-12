@@ -3,7 +3,7 @@ exports.config = {
   output: './output',
   helpers: {
     Puppeteer: {
-      url: 'http://localhost',
+      url: 'https://github.com',
       show: true
     }
   },
