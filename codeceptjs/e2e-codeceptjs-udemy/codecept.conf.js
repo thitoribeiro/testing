@@ -3,7 +3,7 @@ exports.config = {
   output: './output',
   helpers: {
     WebDriver: {
-      url: 'http://the-internet.herokuapp.com/',
+      url: 'http://the-internet.herokuapp.com',
       browser: 'chrome'
     }
   },
