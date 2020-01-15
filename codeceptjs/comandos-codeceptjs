@@ -1,0 +1,35 @@
+- Criar pasta no MacOS/Linux
+mkdir "nome da pasta"
+
+- Acessar pasta criada
+cd "nome da pasta"
+
+- Criar o package.json
+npm init -y
+
+- Instalar o Codeceptjs com Webdriver e selenium-standalone
+npm insatll codeceptjs webdriverio selenium-standalone --save-dev
+
+- Baixar o selenium server e os drivers padroes
+npx selenium-standalone install
+
+- Iniciar o projeto em Codeceptjs
+npx codeceptjs init
+
+- Criar o teste em Codeceptjs
+npx codeceptjs gt
+
+- Startar o selenium server
+npx selenium-standalone Startar
+
+- Executar o teste
+npx codeceptjs run "nome do arquivo" --steps
+- Executar o teste com o passo a passo
+npx codeceptjs run "nome do arquivo" --steps --verbose
+
+- Caso queira utilizar o Browserstack
+npm install codeceptjs-bshelper --save-dev
+
+
+
+
