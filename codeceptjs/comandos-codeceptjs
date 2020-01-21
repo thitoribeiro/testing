@@ -20,7 +20,7 @@ npx codeceptjs init
 npx codeceptjs gt
 
 - Startar o selenium server
-npx selenium-standalone Startar
+npx selenium-standalone start
 
 - Executar o teste
 npx codeceptjs run "nome do arquivo" --steps

@@ -1,21 +1,30 @@
-let config = {
-  tests: "./*_test.js",
-  output: "./output",
+const { setHeadlessWhen } = require('@codeceptjs/configure');
+
+// turn on headless mode when running with HEADLESS=true environment variable
+// HEADLESS=true npx codecept run
+setHeadlessWhen(process.env.HEADLESS);
+
+exports.config = {
+  tests: './*/*_test.js',
+  output: './output',
   helpers: {
     WebDriver: {
-      url: "http://the-internet.herokuapp.com",
-      browser: "chrome",
-      windowSize: "maximize"
-} },
+      url: 'http://the-internet.herokuapp.com',
+      browser: 'chrome'
+    }
+  },
   include: {
-    I: "./steps_file.js"
+    I: './steps_file.js'
   },
   bootstrap: null,
   mocha: {},
-  name: "first-e2e-test",
-};
-if (process.profile === "chrome-ci") {
-config.helpers.WebDriver.host = process.env.SELENIUM_STANDALONE_CHROME_PORT_4444_TCP_ADDR; config.helpers.WebDriver.protocol = "http";
-config.helpers.WebDriver.port = 4444;
+  name: 'first-e2e-test',
+  plugins: {
+    retryFailedStep: {
+      enabled: true
+    },
+    screenshotOnFail: {
+      enabled: true
+    }
+  }
 }
-exports.config = config;
