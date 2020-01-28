@@ -1,3 +1,5 @@
+CODECEPTJS
+=====================================================================
 - Criar pasta no MacOS/Linux
 mkdir "nome da pasta"
 
@@ -31,5 +33,24 @@ npx codeceptjs run "nome do arquivo" --steps --verbose
 npm install codeceptjs-bshelper --save-dev
 
 
+CUCUMBERJS
+========================================================================
+- Instalar Cucumber.js
+npm install --save-dev cucumber
 
+- Iniciar projeto com Gherkin
+codeceptjs gherkin:init 
+
+
+- Gerar os snippets para escrever o código de automação
+Codeceptjs gherkin:snippets
+
+- Executar os testes com Cucumberjs
+Codeceptjs run --features
+
+
+MOCHAWESOME
+========================================================================
+- Instalar o mochawesome
+npm i mochawesome
 

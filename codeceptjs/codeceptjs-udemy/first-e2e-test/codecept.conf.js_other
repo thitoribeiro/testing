@@ -1,0 +1,29 @@
+exports.config = {
+  tests: "./*/*_test.js",
+  output: "./output",
+  helpers: {
+    WebDriver: {
+      url: "http://the-internet.herokuapp.com",
+      browser: "chrome", //Browser to be tested
+      user: "thitoribeiro1", //Browserstack user
+      key: "Ep2R2nYAKpFh7JTLejkn", //Brouserstack key
+      desiredCapabilities: { //Browserstack settings
+        browser_version: "",
+        resolution: "1920x1080",
+        project: "first-e2e-testing"
+      }
+    },
+    BrowserstackHelper: {
+      require: "codeceptjs-bshelper",
+      user: "thitoribeiro1",
+      key: "Ep2R2nYAKpFh7JTLejkn"
+    },
+    REST: {}
+  },
+  include: {
+    I: "./steps_file.js"
+  },
+  bootstrap: null,
+  mocha: {},
+  name: "first-e2e-testing",
+};
