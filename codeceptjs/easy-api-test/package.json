@@ -5,7 +5,8 @@
   "main": "codecept.conf.js",
   "dependencies": {
     "chai": "^4.2.0",
-    "codeceptjs": "^2.3.5"
+    "codeceptjs": "^2.3.5",
+    "mocha": "^7.0.1"
   },
   "devDependencies": {},
   "scripts": {
