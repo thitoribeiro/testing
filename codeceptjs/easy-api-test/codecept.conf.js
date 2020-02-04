@@ -1,9 +1,9 @@
 exports.config = {
-tests: "./*/*_test.js",
+  tests: "./*/*_test.js",
 	output: "./output",
 	helpers: {
 		REST: {
-			endpoint: "https://swapi.co",
+			endpoint: "https://reqres.in/",
 			onRequest: () => {
 				
 			}
@@ -20,3 +20,5 @@ tests: "./*/*_test.js",
 		}
 	}
 };
+
+

@@ -9,7 +9,7 @@ Scenario('Verify a successful call', async () => {
 });
 
 Scenario('Verifying the result', async () => {
-	const res = await I.sendGetRequest('/api/people/1/');
+	const res = await I.sendGetRequest('/api/people/2/');
 	//expect(res.name).to.contain('Luke Skywalker')
 	expect(res.data.name).to.eql("Luke Skywalker");
 	expect(res.data.height).to.eql("172");

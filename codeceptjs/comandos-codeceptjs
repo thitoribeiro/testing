@@ -10,7 +10,7 @@ cd "nome da pasta"
 npm init -y
 
 - Instalar o Codeceptjs com Webdriver e selenium-standalone
-npm insatll codeceptjs webdriverio selenium-standalone --save-dev
+npm install codeceptjs webdriverio selenium-standalone --save-dev
 
 - Baixar o selenium server e os drivers padroes
 npx selenium-standalone install
