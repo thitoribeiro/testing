@@ -1,0 +1,18 @@
+{
+  "name": "codeceptjs",
+  "version": "1.0.0",
+  "description": "Easynvest API Test",
+  "main": "codecept.conf.js",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "codeceptjs": "^2.3.5"
+  },
+  "devDependencies": {
+    "cucumber": "^6.0.5"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
+}
