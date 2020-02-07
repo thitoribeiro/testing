@@ -4,7 +4,7 @@ const {I} = inject();
 Feature('GET personalinfo');
 
 Scenario('Verify a successful call', async () => {
-	const res = await I.sendGetRequest('/api/registrar/v1/customers/personalinfo');
+	const res = await I.sendGetRequest('/api/registrar/v1/customers/personalinfo/');
 	console.log(res.data);
 	expect(res.status).to.eql(200);
 });
@@ -20,4 +20,3 @@ Scenario('Verifying the result', async () => {
 	expect(res.data.birth_year).to.eql("19BBY");
 	expect(res.data.gender).to.eql("male");
 });
-
