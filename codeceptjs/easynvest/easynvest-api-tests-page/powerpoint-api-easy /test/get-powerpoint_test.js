@@ -1,19 +1,25 @@
-//const expect = require('chai').expect;
-const chai = require('chai')
-, expect = chai.expect
-, should = chai.should();
+const expect = require('chai').expect;
+//, expect = chai.expect
+//, should = chai.should();
 const {I} = inject();
-const sleep = m => new Promise(r=> setTimeout(r,m));
+//const sleep = m => new Promise(r=> setTimeout(r,m));
 
 Feature('GET presentation');
 
 Scenario('Verify a successful call', async () => {
-	const res = await I.sendGetRequest('/api/v1/Presentation?PresentationName=ComSlide');
-	console.log(res.data.presentation);
+	const res = await I.sendGetRequest('/api/v1/Presentation?Name=ReservaEmergencia');
+	//console.log(res.data.presentation);
 	expect(res.status).to.eql(200);
 	console.log("Status code is 200!")
 });
 
+
+Scenario('Verify a bad request call', async () => {
+	const res = await I.sendGetRequest('/api/v1/Presentation?Name=ReservaEmergencia*404');
+	//console.log(res.data.presentation);
+	expect(res.status).to.eql(404);
+	console.log("Status code is 404!")
+});
 
 
 
