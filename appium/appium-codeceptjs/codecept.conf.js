@@ -11,7 +11,7 @@ exports.config = {
     Appium: {
       app: '/Users/thito.ribeiro/Documents/apk_easynvest/app-homolog-debug.apk',
       platform: 'Android',
-      device: 'emulator'
+      device: 'Pixel API 26'
     }
   },
   include: {
@@ -19,8 +19,7 @@ exports.config = {
   },
   bootstrap: null,
   mocha: {},
-  name: 'codeceptjs-appium',
-  translation: 'pt-BR',
+  name: 'appium-codeceptjs',
   plugins: {
     retryFailedStep: {
       enabled: true
